@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import Card from "../components/Card.astro";
+import "../styles/global.css";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <h1>HEy</h1>
+    <!-- <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="full"
+      height="full"
+      viewBox="0 200 1512 797"
+      fill="none"
+      preserveAspectRatio="xMinYMid slice"
+    >
+      <path
+        d="M130 726.5C-122.393 732.5 -90.6864 792.575 -84.5199 750.769V-38H1647.94C1690.6 224.923 1760.43 724.102 1698.43 617.432C1620.94 484.096 1451.44 548.681 1154.45 571.598C857.456 594.515 875.455 632.433 724.459 750.769C573.463 869.105 445.492 719 130 726.5Z"
+        fill="#FAFAEB"
+        stroke="black"></path>
+    </svg> -->
+    <object
+      id="backgroundPath"
+      type="image/svg+xml"
+      data="/src/lib/backgroundPath.svg"></object>
+    <object id="pizza" type="image/svg+xml" data="/src/lib/pizza.svg"></object>
+    <object id="croissant" type="image/svg+xml" data="/src/lib/croissant.svg"
+    ></object>
+  </main>
+</Layout>
+
+<style>
+  #backgroundPath {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+
+  #pizza {
+    position: absolute;
+    top: 500px;
+    left: 300px;
+    z-index: -1;
+  }
+  #croissant {
+    position: absolute;
+    top: 500px;
+    right: 300px;
+    z-index: -1;
+  }
+
+  main {
+    margin: auto;
+    padding: 1rem;
+    height: max-content;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    /* color: white; */
+    /* background-color: red; */
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
